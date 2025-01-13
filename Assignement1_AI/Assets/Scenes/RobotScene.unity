@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -254,9 +253,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _parentBlackboard: {fileID: 0}
-  _serializedBlackboard: '{"_variables":{}}'
-  _objectReferences: []
-  _serializedVariables: []
+  _serializedBlackboard: '{"_variables":{"robotTransform":{"_value":1,"_name":"robotTransform","_id":"58f71ac7-cdec-4055-8124-26ba33d8de77","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"moveSpeed":{"_value":2.5,"_name":"moveSpeed","_id":"ca614379-04e5-45c1-9269-9ad075262883","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"turnSpeed":{"_value":120.0,"_name":"turnSpeed","_id":"5a851a6c-223d-4683-8bd1-fd61dfd50d4b","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"stoppingDistance":{"_value":0.1,"_name":"stoppingDistance","_id":"0d3c3267-3167-4569-9938-48cc97dab2dc","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}'
+  _objectReferences:
+  - {fileID: 0}
+  - {fileID: 341929442}
+  _serializedVariables:
+  - _json: '{"_value":1,"_name":"robotTransform","_id":"58f71ac7-cdec-4055-8124-26ba33d8de77","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references:
+    - {fileID: 0}
+    - {fileID: 341929442}
+  - _json: '{"_value":2.5,"_name":"moveSpeed","_id":"ca614379-04e5-45c1-9269-9ad075262883","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
+  - _json: '{"_value":120.0,"_name":"turnSpeed","_id":"5a851a6c-223d-4683-8bd1-fd61dfd50d4b","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
+  - _json: '{"_value":0.1,"_name":"stoppingDistance","_id":"0d3c3267-3167-4569-9938-48cc97dab2dc","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
 --- !u!114 &341929445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -270,10 +289,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _serializedExposedParameters: []
-  _boundGraphSerialization: 
-  _boundGraphObjectReferences: []
+  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[{"moveSpeed":{"_name":"moveSpeed","_targetVariableID":"ca614379-04e5-45c1-9269-9ad075262883"},"turnSpeed":{"_name":"turnSpeed","_targetVariableID":"5a851a6c-223d-4683-8bd1-fd61dfd50d4b"},"destination":1,"$type":"NodeCanvas.Tasks.Actions.MoveTask"}]},"_color":{"r":0.7215686,"g":0.3019608,"b":0.2313726,"a":1.0},"_name":"Move
+    To Compactor","_position":{"x":505.0,"y":217.0},"_comment":"Move to destination","$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[{"moveSpeed":{"_name":"moveSpeed","_targetVariableID":"ca614379-04e5-45c1-9269-9ad075262883"},"turnSpeed":{"_name":"turnSpeed","_targetVariableID":"5a851a6c-223d-4683-8bd1-fd61dfd50d4b"},"destination":2,"$type":"NodeCanvas.Tasks.Actions.MoveTask"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Move
+    To Charger","_position":{"x":700.0,"y":303.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
+  _boundGraphObjectReferences:
+  - {fileID: 0}
+  - {fileID: 1366323902}
+  - {fileID: 546998561}
   _boundGraphSource:
-    _version: 0
+    _version: 3.31
     _category: 
     _comments: 
     _translation: {x: 0, y: 0}
